@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <!-- Theme Made By www.w3schools.com - No Copyright -->
-    <title>Bootstrap Theme The Band</title>
+    <title>Sobha Dream Acres</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -22,7 +22,7 @@
             color: #111;
         }
         .container {
-            padding: 80px 120px;
+            padding: 80px 10px;
         }
         .person {
             border: 10px solid transparent;
@@ -156,6 +156,28 @@
         textarea {
             resize: none;
         }
+
+        .div-fixed {
+            /*height: 70px;*/
+            /*border: solid;*/
+            /*display:flex;*/
+            /*width: 160px; !* Set the width of the sidebar *!*/
+            position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+            z-index: 1; /* Stay on top */
+            display:flex;
+            top: 50%; /* Stay at the top */
+            right: -5%;
+
+        }
+        .btn-fixed:hover
+        {
+            background-image:none;
+            position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+            z-index: 1; /* Stay on top */
+            display:flex;
+            top: 50%; /* Stay at the top */
+            right: 0;
+        }
     </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -179,16 +201,16 @@
                 <li><a href="#location">LOCATION</a></li>
                 <li><a href="#plan">PLAN</a></li>
                 <li><a href="#contact">CONTACT</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Merchandise</a></li>
-                        <li><a href="#">Extras</a></li>
-                        <li><a href="#">Media</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+<!--                <li class="dropdown">-->
+<!--                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE-->
+<!--                        <span class="caret"></span></a>-->
+<!--                    <ul class="dropdown-menu">-->
+<!--                        <li><a href="#">Merchandise</a></li>-->
+<!--                        <li><a href="#">Extras</a></li>-->
+<!--                        <li><a href="#">Media</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--                <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>-->
             </ul>
         </div>
     </div>
@@ -271,6 +293,16 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
+</div>
+
+<div class="div-fixed" >
+        <span>
+            <button class="btn btn-fixed" data-toggle="modal" data-target="#myModal">
+                 <span class="glyphicon glyphicon-search"></span>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                Enquiry
+            </button>
+        </span>
 </div>
 
 <!-- Container (The Band Section) -->
@@ -357,8 +389,9 @@
                     </p>
                 </div>
                 <div class="row">
-                    <h3>Approximate Distances</h3>
+                    <h3 class="text-center"> Approximate Distances</h3>
                     <div class="col-sm-6" >
+
                         <ul>
                             <li>ORR (Kadubeesaganahalli Junction) : 3Km</li>
                             <li>RMZ Ecospace (on ORR) : 6Km</li>
@@ -377,11 +410,11 @@
                 </div>
             </div>
             <div class="col-sm-4" >
-                <div>
-                <iframe width="400"
+
+                <iframe width="100%"
                         height="450"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5111973591697!2d77.73547521484929!3d12.939107319091246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae127a6e67f989%3A0x1a41f3df0295dcfa!2sSobha%20Dream%20Acres%2C%20Balagere%20Panathur%20Road%20Bangalore%2C%20Balagere%20Rd%2C%20Devasthanagalu%2C%20Varthur%2C%20Karnataka%20560087!5e0!3m2!1sen!2sin!4v1642867104292!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
+
                     <!--                <div id="googleMap"></div>-->
             </div>
         </div>
@@ -396,19 +429,18 @@
         <li><a data-toggle="tab" href="#floor1">2 BHK</a></li>
         <li><a data-toggle="tab" href="#floor2">3 BHK</a></li>
     </ul>
-
-    <div class="tab-content">
-        <div id="masterplan" class="tab-pane fade in active">
+    <div class="tab-content col-sm-12">
+        <div id="masterplan" class="tab-pane fade in active  col-sm-4">
             <h2>Mike Ross, Manager</h2>
             <img src="images/SOBHA-Dream-Acres-Master-Plan.jpeg"  class="img-responsive" style="width: 500px">
             <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
         </div>
-        <div id="floor1" class="tab-pane fade">
+        <div id="floor1" class="tab-pane fade col-sm-4">
             <h2>Chandler Bing, Guitarist</h2>
             <img src="images/SOBHA-Dream-Acres-Floor-Plans-1.jpeg" class="img-responsive" style="width: 500px">
             <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
         </div>
-        <div id="floor2" class="tab-pane fade">
+        <div id="floor2" class="tab-pane fade col-sm-4">
             <h2>Peter Griffin, Bass player</h2>
             <img src="images/SOBHA-Dream-Acres-Floor-Plans-1.jpeg" class="img-responsive" style="width: 500px">
             <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
@@ -419,14 +451,13 @@
 <!-- Container (Contact Section) -->
 <div id="contact" class="bg-2" >
     <div  class="container" >
-
         <div class="row">
-            <div style="min-height:100px;">
-                <div class="col-xs-9">
+            <div>
+                <div class="col-sm-9 col-xs-12">
                     <h3 class="text-center">Contact</h3>
                 </div>
-                <div class="col-xs-3">
-                    <button class="btn" data-toggle="modal" data-target="#myModal">Download Brochure</button>
+                <div class="col-sm-3 col-xs-12 ">
+                    <button class="btn pull-right" data-toggle="modal" data-target="#myModal">Download Brochure</button>
                 </div>
             </div>
         </div>
@@ -441,21 +472,28 @@
                 <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
             </div>
             <div class="col-md-8">
+                <form id="contact-form" role="form" method="post" action="https://script.google.com/macros/s/AKfycbywLXVBony58BWyqleIOa7A-wEN7HLGsbe5xC92M8xlwm_unWUFIJl0elrXfdJftkZs3g/exec">
+
                 <div class="row">
-                    <div class="col-sm-6 form-group">
-                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+
+                    <div class="col-sm-4 form-group">
+                        <input class="form-control"  name="Name" placeholder="Name" type="text" required>
                     </div>
-                    <div class="col-sm-6 form-group">
-                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    <div class="col-sm-4 form-group">
+                        <input class="form-control"  name="Email" placeholder="Email" type="email" required>
+                    </div>
+                    <div class="col-sm-4 form-group">
+                        <input class="form-control"  name="Phone" placeholder="Phone" type="number" required>
                     </div>
                 </div>
-                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+                <textarea class="form-control" name="Comment" placeholder="Comment" rows="5"></textarea>
                 <br>
                 <div class="row">
                     <div class="col-md-12 form-group">
                         <button class="btn pull-right" type="submit">Send</button>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>
@@ -471,17 +509,20 @@
                     <h4><span class="glyphicon glyphicon-lock"></span> Brochure</h4>
                 </div>
                 <div class="modal-body">
-                    <form role="form">
+                    <form id="modal-form" role="form" method="post" action="https://script.google.com/macros/s/AKfycbywLXVBony58BWyqleIOa7A-wEN7HLGsbe5xC92M8xlwm_unWUFIJl0elrXfdJftkZs3g/exec">
                         <div class="form-group">
-                            <label for="psw"><span class="glyphicon glyphicon-user"></span> Full Name</label>
-                            <input type="text" class="form-control" id="psw" placeholder="Name">
+                            <label for="name"><span class="glyphicon glyphicon-user"></span> Full Name</label>
+                            <input name="Name" type="text" class="form-control" id="name" placeholder="Name" required>
                         </div>
                         <div class="form-group">
                             <label for="usrname"><span class="glyphicon glyphicon-envelope"></span> Send To</label>
-                            <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                            <input name="Email" type="email" class="form-control" id="usrname" placeholder="Enter email" required>
                         </div>
-
-                            <button  id="submit-cmd" type="submit" class="btn btn-block" href="files/sobha-dream-acres.pdf">
+                        <div class="form-group">
+                            <label for="phone"><span class="glyphicon glyphicon-phone"></span> Phone Number</label>
+                                <input name="Phone" type="number" class="form-control" id="phone" placeholder="Enter Phone" required>
+                        </div>
+                            <button id="submit-cmd" type="submit" class="btn btn-block">
                                 Submit
                                 <span class="glyphicon glyphicon-ok"></span>
                             </button>
@@ -598,38 +639,79 @@
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5EMdMRrrUUU7nk2QiGCmP5wBh-2aA990&callback=myMap"></script>
-
-
 <script>
-    $('#submit-cmd').click(function () {
-        window.open("files/sobha-dream-acres.pdf", "_blank");
-        // var element = document.createElement('a');
-        //
-        // // Setting the path to the pdf file
-        // element.href = 'files/sobha-dream-acres.pdf';
-        // element.
-        //
-        // // Name to display as download
-        // element.download = 'files/sobha-dream-acres.pdf';
-        //
-        // // Adding element to the body
-        // document.documentElement.appendChild(element);
-        //
-        // // Above code is quivalent to
-        // // <a href="path to file" download="download name"/>
-        //
-        // // Trigger the file download
-        // element.click();
-        //
-        // // Remove the element from the body
-        // document.documentElement.remove(element);
+    window.addEventListener("load", function() {
+        var form = document.getElementById('modal-form');
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+                .then(() => {
+                    window.open("files/sobha-dream-acres.pdf", "_blank");
+                    alert("We will contact you shortly!");
+                    // $("#myModal").modal("show");
+                    $("#myModal").modal("hide");
 
-        // Submit event, to submit the form
-       // myForm.submit();
+                })
+        });
     });
 
+</script>
+
+<script>
+    window.addEventListener("load", function() {
+        var form = document.getElementById('contact-form');
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+                .then(() => {
+                    alert("We will contact you shortly!");
+
+                })
+        });
+    });
 
 </script>
+
+<!--<script>-->
+<!--    $('#submit-cmd').click(function () {-->
+<!--        window.open("files/sobha-dream-acres.pdf", "_blank");-->
+<!--        // var element = document.createElement('a');-->
+<!--        //-->
+<!--        // // Setting the path to the pdf file-->
+<!--        // element.href = 'files/sobha-dream-acres.pdf';-->
+<!--        // element.-->
+<!--        //-->
+<!--        // // Name to display as download-->
+<!--        // element.download = 'files/sobha-dream-acres.pdf';-->
+<!--        //-->
+<!--        // // Adding element to the body-->
+<!--        // document.documentElement.appendChild(element);-->
+<!--        //-->
+<!--        // // Above code is quivalent to-->
+<!--        // // <a href="path to file" download="download name"/>-->
+<!--        //-->
+<!--        // // Trigger the file download-->
+<!--        // element.click();-->
+<!--        //-->
+<!--        // // Remove the element from the body-->
+<!--        // document.documentElement.remove(element);-->
+
+<!--        // Submit event, to submit the form-->
+<!--       // myForm.submit();-->
+<!--    });-->
+
+
+<!--</script>-->
 <script>
     $(document).ready(function(){
         // Initialize Tooltip
